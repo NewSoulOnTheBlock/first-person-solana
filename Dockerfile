@@ -15,8 +15,8 @@ WORKDIR /app
 
 # Which releases to pull artifacts from. Bump these to redeploy new builds.
 ARG REPO=NewSoulOnTheBlock/first-person-solana
-ARG BINARY_RELEASE=v4
-ARG ASSETS_RELEASE=v1
+ARG BINARY_RELEASE=v5
+ARG ASSETS_RELEASE=v5
 
 # Download the prebuilt server binary and the game assets bundle.
 RUN curl -fSL "https://github.com/${REPO}/releases/download/${BINARY_RELEASE}/sour" -o /app/sour \
