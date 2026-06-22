@@ -13,15 +13,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-# Which release to pull artifacts from. Bump RELEASE to redeploy new builds.
+# Which releases to pull artifacts from. Bump these to redeploy new builds.
 ARG REPO=NewSoulOnTheBlock/first-person-solana
-ARG RELEASE=v1
+ARG BINARY_RELEASE=v2
+ARG ASSETS_RELEASE=v1
 
 # Download the prebuilt server binary and the game assets bundle.
-RUN curl -fSL "https://github.com/${REPO}/releases/download/${RELEASE}/sour" -o /app/sour \
+RUN curl -fSL "https://github.com/${REPO}/releases/download/${BINARY_RELEASE}/sour" -o /app/sour \
     && chmod +x /app/sour \
     && mkdir -p /app/assets \
-    && curl -fSL "https://github.com/${REPO}/releases/download/${RELEASE}/assets-dist.tar.gz" -o /tmp/assets.tar.gz \
+    && curl -fSL "https://github.com/${REPO}/releases/download/${ASSETS_RELEASE}/assets-dist.tar.gz" -o /tmp/assets.tar.gz \
     && tar xzf /tmp/assets.tar.gz -C /app/assets \
     && rm /tmp/assets.tar.gz
 
