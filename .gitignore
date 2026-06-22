@@ -1,0 +1,3 @@
+# Release artifacts live in the GitHub Release, not in git.
+sour
+assets-dist.tar.gz
