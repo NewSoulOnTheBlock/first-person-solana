@@ -9,11 +9,13 @@ server:
       config:
         defaultMode: "ffa"
         defaultMap: "turbine"
+        matchLength: 300
     - name: "insta-duel"
       virtual: true
       config:
         defaultMode: "insta"
         defaultMap: "turbine"
+        matchLength: 300
     - name: "default"
       default: true
       config:
@@ -23,6 +25,7 @@ server:
       config:
         defaultMode: "ffa"
         defaultMap: "complex"
+        matchLength: 300
         maps:
           - "turbine"
           - "complex"
@@ -31,6 +34,7 @@ server:
       config:
         defaultMode: "insta"
         defaultMap: "complex"
+        matchLength: 300
         maps:
           - "turbine"
           - "complex"
